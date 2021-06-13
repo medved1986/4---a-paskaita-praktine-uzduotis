@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ketvirta uzduotis index_flex</title>
+    <style>
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+
+        [class*="flex-item-"] {
+            display: flex;
+            align-items: center;
+            float: left;
+            outline: solid black;
+            outline-width: 1px;
+            /* flex-direction: row; */
+            text-align: center;
+        }
+
+        .flex-item-1 {
+            width: 100%;
+        }
+
+        .flex-item-2,
+        .flex-item-3 {
+            width: 50%;
+        }
+
+        .flex-item-4 {
+            width: 70%;
+        }
+
+        .flex-item-5 {
+            width: 30%;
+        }
+
+        .flex-item-6,
+        .flex-item-7,
+        .flex-item-8 {
+            width: 33.33%;
+        }
+
+        .raudona {
+            background-color: red;
+        }
+
+        .oranzine {
+            background-color: orange;
+        }
+
+        .geltona {
+            background-color: yellow;
+        }
+
+        .zalia {
+            background-color: green;
+        }
+
+        .zydra {
+            background-color: lightblue;
+        }
+
+        .melyna {
+            background-color: blue;
+        }
+
+        .violetine {
+            background-color: violet;
+        }
+
+        @media screen and (max-width: 720px)  {
+            .flex-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+           }
+           
+        }
+        
+    </style>
+</head>
+
+<body style="max-width:80%; margin: auto;">
+    <div class="container">
+        <div class="flex-container">
+            <div class="flex-item-1 raudona">
+                <h1>Pavadinimas</h1>
+                <h2>Pavadinimas</h2>
+            </div>
+            <div class="flex-item-2 oranzine">
+                <h3>Pavadinimas</h3>
+                <h4>Pavadinimas</h4>
+
+            </div>
+            <div class="flex-item-3 geltona">
+                <h5>Pavadinimas</h5>
+                <h6>Pavadinimas</h6>
+
+            </div>
+            <div class="flex-item-4 zalia">
+                <p>Tekstas Tekstas Tekstas Tekstas Tekstas</p>
+                <p>Tekstas Tekstas Tekstas Tekstas Tekstas</p>
+                <p>Tekstas Tekstas Tekstas Tekstas Tekstas</p>
+                <p>Tekstas s Tekstas Tekstas Tekstas</p>
+
+            </div>
+            <div class="flex-item-5 zydra">
+                <span>Tekstas Tekstas Tekstas Tekstas Tekstas</span><br>
+                <span>Tekstas Tekstas Tekstas Tekstas Tekstas</span><br>
+                <ol>
+
+                    <li>
+                        <p> aaaaaaaaaaa</p>
+                    </li>
+                    <li>
+                        <p> bbbbbbbbbbbbbbbbb</p>
+                    </li>
+                    <li>
+                        <p> ccccccccccc</p>
+                    </li>
+                    <li>
+                        <p> ddddddddddd</p>
+                    </li>
+                    <li>
+                        <p> eeeeeeeeee</p>
+                    </li>
+                    <li>
+                        <p> fffffffffffff</p>
+                    </li>
+
+                </ol>
+            </div>
+            <div class="flex-item-6 melyna">
+                <span>Tekstas Tekstas Tekstas Tekstas Tekstas</span><br>
+                <span>Tekstas Tekstas Tekstas Tekstas Tekstas</span><br>
+
+                <ul>
+                    <p> abc</p>
+                </ul>
+                <ul>
+                    <p> cde</p>
+                </ul>
+                <ul>
+                    <p> efg</p>
+                </ul>
+                <ul>
+                    <p> ghi</p>
+                </ul>
+                <ul>
+                    <p> ijk</p>
+                </ul>
+                <ul>
+                    <p> klm</p>
+                </ul>
+
+            </div>
+            <div class="flex-item-7 violetine">
+                <img style="max-width:50%; margin: auto;"
+                    src="https://pixelmechanics.com.sg/wp-content/uploads/2019/06/html5-logo-for-web-development-1200x667.png">
+                <img style="max-width:50%; margin: auto;"
+                    src="https://pixelmechanics.com.sg/wp-content/uploads/2019/06/html5-logo-for-web-development-1200x667.png">
+            </div>
+            <div class="flex-item-8">
+                <img style="max-width:40%; margin: auto;"
+                    src="https://pixelmechanics.com.sg/wp-content/uploads/2019/06/html5-logo-for-web-development-1200x667.png">
+                <img style="max-width:60%; margin: auto;"
+                    src="https://pixelmechanics.com.sg/wp-content/uploads/2019/06/html5-logo-for-web-development-1200x667.png">
+
+            </div>
+        </div>
+
+
+    </div>
+    <!-- .remas{
+            outline: 11px solid black;-->
+
+    <!-- .pirmas-blokas {
+            width: 100%;
+            float: left;
+        }
+    
+        .antras-blokas {
+            width: 50%;
+            float: left;
+        }
+
+        .trecias-blokas {
+            width: 50%;
+            float: left;
+        }
+
+        .ketvirtas-blokas {
+            width: 70%;
+            float: left;
+        }-->
+
+    <!-- nuemu saraso numeracija, 6 uzduoties punkatas -->
+    <!--   .penktas-blokas {
+            width: 30%;
+            float: left;}    
+    
+        .sestas-blokas {
+            width: 33.33%;
+            height: 100%;
+            float: left;
+        }
+
+        .septintas-blokas {
+            width: 33.33%;
+            height: 100%;
+            float: left;
+        }
+
+        .astuntas-blokas {
+
+            width: 33.33%;
+            height: 100%;
+            float: left;  } -->
+
+</body>
+
+</html>
