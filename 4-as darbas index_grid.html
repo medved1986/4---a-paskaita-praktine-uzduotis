@@ -12,15 +12,15 @@
             box-sizing: border-box;
         }
 
-        .grid-container {
+        .grid-conteiner {
             float: left;
             width: 100%;
         }
 
         [class*="col-"] {
-            width: 100%;
             float: left;
             text-align: left;
+            justify-items: center;
             outline: solid black 1px;
         }
 
@@ -86,17 +86,18 @@
         }
 
         @media screen and (max-width: 720px) {
-            .grid-container {
-                display: table-row;
-                float: left;
-            }
-
+            .grid-conteiner {
+                display: row;
+                flex-wrap: nowrap;
+                justify-items: left;
+                            }
         }
+        .col-6 {list-style: none;}
     </style>
 </head>
 
-<body style="max-width:80%; margin: auto;">
-    <div class="grid-container">
+<body>
+    <div class="grid-conteiner">
         <div class="col-1 raudona">
             <h1>Pavadinimas</h1>
             <h2>Pavadinimas</h2>
