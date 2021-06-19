@@ -6,17 +6,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ketvirta uzduotis index_flex</title>
+    <title>ketvirta uzduotis index_grid</title>
     <style>
         * {
-            box-sizing: border-box
+            box-sizing: border-box;
         }
 
-        . class="col-" {
-            width: 25%;
+        .grid-container {
             float: left;
-            padding: 15px;
-            border: 1px solid red;
+            width: 100%;
+        }
+
+        [class*="col-"] {
+            width: 100%;
+            float: left;
+            text-align: left;
+            outline: solid black 1px;
+        }
+
+        .col-1 {
+            width: 100%;
+            float: left;
+        }
+
+        .col-2,
+        .col-3 {
+            width: 50%;
+            float: left;
+        }
+
+        .col-4 {
+            width: 70%;
+            float: left;
+        }
+
+        .col-5 {
+            width: 30%;
+            float: left;
+        }
+
+        .col-6,
+        .col-7,
+        .col-8 {
+            width: 33.30%;
+            float: left;
         }
 
         .raudona {
@@ -47,10 +80,15 @@
             background-color: violet;
         }
 
+        p {
+            color: darkgrey;
+            font-size: 12px;
+        }
+
         @media screen and (max-width: 720px) {
             .grid-container {
-                display: grid;
-                grid-template-rows: row;
+                display: table-row;
+                float: left;
             }
 
         }
@@ -58,95 +96,91 @@
 </head>
 
 <body style="max-width:80%; margin: auto;">
-    <div class="container">
-        <div class="grid-container">
-            <div class="grid-item-1 raudona">
-                <h1>Pavadinimas</h1>
-                <h2>Pavadinimas</h2>
-            </div>
-            <div class="grid-item-2 oranzine">
-                <h3>Pavadinimas</h3>
-                <h4>Pavadinimas</h4>
-
-            </div>
-            <div class="grid-item-3 geltona">
-                <h5>Pavadinimas</h5>
-                <h6>Pavadinimas</h6>
-
-            </div>
-            <div class="grid-item-4 zalia">
-                <p>Tekstas Tekstas Tekstas Tekstas Tekstas</p>
-                <p>Tekstas Tekstas Tekstas Tekstas Tekstas</p>
-                <p>Tekstas Tekstas Tekstas Tekstas Tekstas</p>
-
-            </div>
-            <div class="grid-item-5 zydra">
-                <span>Tekstas Tekstas Tekstas Tekstas Tekstas</span><br>
-                <span>Tekstas Tekstas Tekstas Tekstas Tekstas</span><br>
-                <ol>
-
-                    <li>
-                        <p> aaaaaaaaaaa</p>
-                    </li>
-                    <li>
-                        <p> bbbbbbbbbbbbbbbbb</p>
-                    </li>
-                    <li>
-                        <p> ccccccccccc</p>
-                    </li>
-                    <li>
-                        <p> ddddddddddd</p>
-                    </li>
-                    <li>
-                        <p> eeeeeeeeee</p>
-                    </li>
-                    <li>
-                        <p> fffffffffffff</p>
-                    </li>
-
-                </ol>
-            </div>
-            <div class="flex-item-6 melyna">
-                <span>Tekstas Tekstas Tekstas Tekstas Tekstas</span><br>
-                <span>Tekstas Tekstas Tekstas Tekstas Tekstas</span><br>
-
-                <ul>
-                    <p> abc</p>
-                </ul>
-                <ul>
-                    <p> cde</p>
-                </ul>
-                <ul>
-                    <p> efg</p>
-                </ul>
-                <ul>
-                    <p> ghi</p>
-                </ul>
-                <ul>
-                    <p> ijk</p>
-                </ul>
-                <ul>
-                    <p> klm</p>
-                </ul>
-
-            </div>
-            <div class="flex-item-7 violetine">
-                <img style="max-width:50%; margin: auto;"
-                    src="https://pixelmechanics.com.sg/wp-content/uploads/2019/06/html5-logo-for-web-development-1200x667.png">
-                <img style="max-width:50%; margin: auto;"
-                    src="https://pixelmechanics.com.sg/wp-content/uploads/2019/06/html5-logo-for-web-development-1200x667.png">
-            </div>
-            <div class="flex-item-8">
-                <img style="max-width:40%; margin: auto;"
-                    src="https://pixelmechanics.com.sg/wp-content/uploads/2019/06/html5-logo-for-web-development-1200x667.png">
-                <img style="max-width:60%; margin: auto;"
-                    src="https://pixelmechanics.com.sg/wp-content/uploads/2019/06/html5-logo-for-web-development-1200x667.png">
-
-            </div>
+    <div class="grid-container">
+        <div class="col-1 raudona">
+            <h1>Pavadinimas</h1>
+            <h2>Pavadinimas</h2>
         </div>
+        <div class="col-2 oranzine">
+            <h3>Pavadinimas</h3>
+            <h4>Pavadinimas</h4>
 
+        </div>
+        <div class="col-3 geltona">
+            <h5>Pavadinimas</h5>
+            <h6>Pavadinimas</h6>
 
+        </div>
+        <div class="col-4 zalia">
+            <p>Tekstas Tekstas Tekstas Tekstas Tekstas</p>
+            <p>Tekstas Tekstas Tekstas Tekstas Tekstas</p>
+            <p>Tekstas Tekstas Tekstas Tekstas Tekstas</p>
+
+        </div>
+        <div class="col-5 zydra">
+            <span>Tekstas Tekstas Tekstas Tekstas Tekstas</span><br>
+            <ol>
+
+                <li>
+                    <p> aaaaaaaaaaa</p>
+                </li>
+                <li>
+                    <p> bbbbbbbbbbbbbbbbb</p>
+                </li>
+                <li>
+                    <p> ccccccccccc</p>
+                </li>
+                <li>
+                    <p> ddddddddddd</p>
+                </li>
+                <li>
+                    <p> eeeeeeeeee</p>
+                </li>
+                <li>
+                    <p> fffffffffffff</p>
+                </li>
+
+            </ol>
+        </div>
+        <div class="col-6 melyna">
+            <span>Tekstas Tekstas Tekstas Tekstas Tekstas</span><br>
+            <span>Tekstas Tekstas Tekstas Tekstas Tekstas</span><br>
+
+            <ul>
+                <p> abc</p>
+            </ul>
+            <ul>
+                <p> cde</p>
+            </ul>
+            <ul>
+                <p> efg</p>
+            </ul>
+            <ul>
+                <p> ghi</p>
+            </ul>
+            <ul>
+                <p> ijk</p>
+            </ul>
+            <ul>
+
+        </div>
+        <div class="col-7 violetine">
+            <img style="max-width:50%; margin: auto;"
+                src="https://pixelmechanics.com.sg/wp-content/uploads/2019/06/html5-logo-for-web-development-1200x667.png">
+            <img style="max-width:50%; margin: auto;"
+                src="https://pixelmechanics.com.sg/wp-content/uploads/2019/06/html5-logo-for-web-development-1200x667.png">
+        </div>
+        <div class="col-8">
+            <img style="max-width:40%; margin: auto;"
+                src="https://pixelmechanics.com.sg/wp-content/uploads/2019/06/html5-logo-for-web-development-1200x667.png">
+            <img style="max-width:60%; margin: auto;"
+                src="https://pixelmechanics.com.sg/wp-content/uploads/2019/06/html5-logo-for-web-development-1200x667.png">
+
+        </div>
     </div>
+
+
+
 
 
 </body>
